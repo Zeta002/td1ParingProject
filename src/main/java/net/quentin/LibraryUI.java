@@ -11,13 +11,15 @@ public class LibraryUI {
         System.out.println("select choice : ");
         System.out.println("1. create Library");
         System.out.println("2. create Book");
-        System.out.println("3. show Book in library");
+        System.out.println("3. show Books in library");
         System.out.println("4. remove duplicate in library");
+        System.out.println("5. add book to library");
     }
 
     public void showInterface() {
 
         Scanner theScan = new Scanner(System.in);
+        theLibraries = new ArrayList<>();
 
         while(true) {
 
@@ -69,9 +71,12 @@ public class LibraryUI {
             }
             else if(input.equals("3")) {
                 //         public Library(String name, String address, int max, ArrayList<Book> bookList) {
-                System.out.println("Enter a name of a librery :");
+                System.out.println("Enter a name of a library :");
+                showLibraries();
+                String libraryName = theScan.nextLine();
 
 
+                theLibraries.get(theLibraries.indexOf(libraryName)).getBookList();
 
 
             }
